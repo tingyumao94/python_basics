@@ -33,7 +33,7 @@ if __name__ == '__main__':
     sym = build_network()
 
     mod = mx.mod.Module(symbol=sym,
-                        context=mx.cpu(),
+                        context=mx.gpu(0),
                         data_names=['data'],
                         label_names=['softmax_label'])
 
